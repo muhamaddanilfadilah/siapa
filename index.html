@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Buat Kayla ♥</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffe6e6, #fff);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 40px;
+      background-color: #ffb3b3;
+      color: white;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .gallery, .gallery-potbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px;
+    }
+
+    .photo-card {
+      background: white;
+      padding: 10px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 250px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .photo-card:hover {
+      transform: scale(1.05);
+    }
+
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-style: italic;
+      color: #a64d79;
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin-top: 40px;
+      color: #cc3366;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+
+    /* Falling hearts */
+    .heart {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      color: #ff66a3;
+      animation: fall 5s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-50px); }
+      100% { transform: translateY(110vh); }
+    }
+
+    /* Marquee */
+    .marquee {
+      background-color: #fff0f5;
+      color: #d63384;
+      padding: 10px;
+      font-weight: bold;
+      overflow: hidden;
+      white-space: nowrap;
+      box-shadow: inset 0 0 10px #ffb3c6;
+    }
+
+    .marquee span {
+      display: inline-block;
+      padding-left: 100%;
+      animation: marquee 15s linear infinite;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Autoplay Music -->
+  <audio autoplay loop hidden>
+    <source src="lagu.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Marquee -->
+  <div class="marquee"><span>Hai Kaylaaa! Ini buat kamu yang selalu bikin aku senyum tiap hari 💕✨</span></div>
+
+  <header>
+    <h1>Buat Kayla Dari Danil</h1>
+    <p>Foto-foto yang bikin aku senyum terus :)</p>
+  </header>
+
+<section class="gallery">
+    <div class="photo-card"><img src="1.jpg" alt="Foto pacar"><div class="caption">Tatapan kamu selalu bikin aku tenang 💖</div></div>
+    <div class="photo-card"><img src="2.jpg" alt="Foto pacar"><div class="caption">Cantiknya kamu gak ada duanya ✨</div></div>
+    <div class="photo-card"><img src="3.jpg" alt="Foto pacar"><div class="caption">Senyummu tuh obat capek paling mujarab 🌼</div></div>
+    <div class="photo-card"><img src="4.jpg" alt="Foto pacar"><div class="caption">Setiap liat foto ini, aku auto senyum 😄</div></div>
+    <div class="photo-card"><img src="5.jpg" alt="Foto pacar"><div class="caption">Kamu gak cuma cantik, tapi juga bikin nyaman 💫</div></div>
+    <div class="photo-card"><img src="6.jpg" alt="Foto pacar"><div class="caption">Selalu bersyukur bisa punya kamu ❤️</div></div>
+    <div class="photo-card"><img src="7.jpg" alt="Foto pacar"><div class="caption">Andai kamu tau, segitu berharganya kamu buat aku 🌹</div></div>
+    <div class="photo-card"><img src="8.jpg" alt="Foto pacar"><div class="caption">Kamu selalu jadi alasanku buat semangat 🌟</div></div>
+    <div class="photo-card"><img src="9.jpg" alt="Foto pacar"><div class="caption">Foto ini selalu bikin hati aku adem ☁️</div></div>
+    <div class="photo-card"><img src="10.jpg" alt="Foto pacar"><div class="caption">Kamu adalah definisi “rumah” buat aku 🏠</div></div>
+  </section>
+
+  <div class="section-title">Foto Bareng Kita :)</div>
+
+  <section class="gallery-potbar">
+    <div class="photo-card"><img src="potbar/11.jpg" alt="Foto bareng"><div class="caption">Momen ini masih kerasa sampai sekarang</div></div>
+    <div class="photo-card"><img src="potbar/12.jpg" alt="Foto bareng"><div class="caption">Closed</div></div>
+    <div class="photo-card"><img src="potbar/13.jpg" alt="Foto bareng"><div class="caption">Your eyes</div></div>
+    <div class="photo-card"><img src="potbar/14.jpg" alt="Foto bareng"><div class="caption">Waktu bareng kamu selalu jadi favoritku</div></div>
+    <div class="photo-card"><img src="potbar/15.jpg" alt="Foto bareng"><div class="caption">Di setiap senyum kita, ada sesuatu kecil yang tumbuh</div></div>
+    <div class="photo-card"><img src="potbar/16.jpg" alt="Foto bareng"><div class="caption">Bersamamu, hal kecil pun jadi kenangan besar </div></div>
+    <div class="photo-card"><img src="potbar/17.jpg" alt="Foto bareng"><div class="caption">Bersyukur pernah ada di momen ini sama kamu </div></div>
+    <div class="photo-card"><img src="potbar/18.jpg" alt="Foto bareng"><div class="caption">Kita berdua = bagaikan main biliard cuman berdua</div></div>
+    <div class="photo-card"><img src="potbar/19.jpg" alt="Foto bareng"><div class="caption">Gak ada yang lebih indah dari kebersamaan</div></div>
+    <div class="photo-card"><img src="potbar/20.jpg" alt="Foto bareng"><div class="caption">Kebahagiaan itu sederhana: kamu dan aku</div></div>
+    <div class="photo-card"><img src="potbar/21.jpg" alt="Foto bareng"><div class="caption">Momen ini bakal selalu aku simpan di lambung</div></div>
+    <div class="photo-card"><img src="potbar/22.jpg" alt="Foto bareng"><div class="caption">Senyummu di sini asli gak pernah gagal bikin aku leleh </div></div>
+    <div class="photo-card"><img src="potbar/23.jpg" alt="Foto bareng"><div class="caption">Satu foto, sejuta rasa bareng kamu</div></div>
+  </section>
+
+  <footer>
+    Dari Danil buat kamu yang liat ini!!! 
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" id="photoModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage" />
+  </div>
+
+  <!-- Script -->
+  <script>
+    // Buka modal saat gambar diklik
+    document.querySelectorAll('.photo-card img').forEach(img => {
+      img.addEventListener('click', () => {
+        const modal = document.getElementById("photoModal");
+        const modalImg = document.getElementById("modalImage");
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+
+    function closeModal() {
+      document.getElementById("photoModal").style.display = "none";
+    }
+
+    // Love jatuh dari atas
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.textContent = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (Math.random() * 10 + 16) + 'px';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }, 300);
+
+    // Auto scroll ke bawah pelan-pelan (slideshow feel)
+    setInterval(() => {
+      window.scrollBy({
+        top: 1,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }, 60);
+  </script>
+</body>
+</html>
